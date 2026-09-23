@@ -1,0 +1,19 @@
+body {
+    background-color: #bdd4eb;
+    font-family:'Times New Roman', 'Times', 'serif';
+}
+
+h1 {
+    text-align: center;
+    color: #1d4ed8;
+}
+
+h2 {
+    color: #1f2937;
+}
+
+p {
+    font-size: 20px;
+    color: #374151;
+}
+
