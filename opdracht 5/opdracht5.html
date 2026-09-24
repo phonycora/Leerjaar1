@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opdracht 5 - Vakantie Boeken</title>
+    <link rel="stylesheet" href="opdracht5.css">
+</head>
+<body>
+    <h1>Vakantie Boeken</h1>
+    <!-- De "Boek nu" knop doet het niet, maar dat hoeft volgens mij ook niet :) -->
+    <form>
+        <label for="voornaam">Voornaam:</label><br>
+        <input type="text" id="voornaam" name="voornaam" pattern="[A-Za-zÀ-ÿ\s]+" required>
+        <br><br>
+        <label for="achternaam">Achternaam:</label><br>
+        <input type="text" id="achternaam" name="achternaam" pattern="[A-Za-zÀ-ÿ\s]+" required>
+        <br><br>
+        <p>Geslacht:</p>
+        <input type="radio" id="man" name="geslacht" value="man" checked>
+        <label for="man">Man</label>
+        <input type="radio" id="vrouw" name="geslacht" value="vrouw">
+        <label for="vrouw">Vrouw</label>
+        <input type="radio" id="anders" name="geslacht" value="anders">
+        <label for="anders">Anders</label>
+        <br><br>
+        <label for="straat">Straat met huisnummer:</label><br>
+        <input type="text" id="straat" name="straat" required>
+        <br><br>
+        <label for="postcode">Postcode:</label><br>
+        <input type="text" id="postcode" name="postcode" required>
+        <br><br>
+        <label for="stad">Stad:</label><br>
+        <input type="text" id="stad" name="stad" required>
+        <br><br>
+        <label for="land">Land:</label><br>
+        <input type="text" id="land" name="land" required>
+        <br><br>
+        <label for="bsn">BSN-nummer:</label><br>
+        <input type="text" id="bsn" name="bsn" maxlength="9" pattern="[0-9]{1,9}" required>
+        <br><br>
+        <label for="vakantieland">Vakantieland:</label><br>
+        <select id="vakantieland" name="vakantieland">
+            <option>Nederland</option>
+            <option>Spanje</option>
+            <option>Italië</option>
+            <option>Griekenland</option>
+            <option>Portugal</option>
+        </select>
+        <br><br>
+        <label for="vertrek">Datum van vertrek:</label><br>
+        <input type="date" id="vertrek" name="vertrek" min="2026-09-24" required>
+        <br><br>
+        <label for="terugkomst">Datum van terugkomst:</label><br>
+        <input type="date" id="terugkomst" name="terugkomst" required>
+        <br><br>
+        <label for="reisgenoten">Aantal reisgenoten:</label><br>
+        <input type="number" id="reisgenoten" name="reisgenoten" min="0" max="4" required>
+        <br><br>
+        <label for="mail">E-mail:</label><br>
+        <input type="email" id="mail" name="mail" required>
+        <br><br>
+        <label for="wachtwoord">Wachtwoord:</label><br>
+        <input type="password" id="wachtwoord" name="wachtwoord" required>
+        <br><br>
+        <input type="submit" value="Boek nu">
+    </form>
+</body>
+</html>
