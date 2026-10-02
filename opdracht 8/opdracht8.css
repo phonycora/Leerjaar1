@@ -1,0 +1,115 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	background-color: #090a0d;
+	color: #f3eeee;
+	font-family: Georgia, "Times New Roman", serif;
+}
+
+header {
+	width: 100%;
+	min-height: 33vh;
+	display: flex;
+	align-items: center;
+	padding: 3rem 8vw;
+	background-image: linear-gradient(90deg, rgba(5, 5, 8, 0.92), rgba(5, 5, 8, 0.12)), url("img/hellraiserbanner.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center 42%;
+}
+
+.header-tekst {
+	max-width: 650px;
+}
+
+.bovenkop {
+	color: #d5b6b6;
+	font-size: 0.85rem;
+	text-transform: uppercase;
+}
+
+h1 {
+	margin: 0.6rem 0;
+	color: #f2e9e9;
+	font-size: clamp(2rem, 5vw, 4rem);
+	font-weight: normal;
+}
+
+header p:last-child {
+	color: #e1caca;
+	font-size: 1.1rem;
+}
+
+main {
+	min-height: 100vh;
+	padding: 3rem 0;
+	background-color: #101015;
+	background-image: linear-gradient(rgba(8, 9, 13, 0.78), rgba(8, 9, 13, 0.88)), url("img/hellraisermainpic.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-attachment: fixed;
+}
+
+.verhaal {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 2rem;
+}
+
+article {
+	width: 82%;
+	max-width: 1200px;
+	padding: 1.5rem 2rem;
+	border: 2px solid #76656a;
+	border-left: 8px solid #a62635;
+	border-radius: 12px;
+	background-color: rgba(12, 12, 17, 0.88);
+}
+
+article h2 {
+	margin-top: 0;
+	color: #edb9bd;
+	font-size: 1.7rem;
+}
+
+article p {
+	max-width: 72ch;
+	color: #e1dada;
+	font-size: 1.05rem;
+	line-height: 1.7;
+}
+
+article img {
+	display: block;
+	width: 50vw;
+	height: auto;
+	margin: 1.5rem auto 0;
+	border: 1px solid #76656a;
+	border-radius: 4px;
+}
+
+@media (max-width: 600px) {
+	header {
+		min-height: 40vh;
+		padding: 2rem 7vw;
+		background-position: 58% center;
+	}
+
+	article {
+		width: 90%;
+		padding: 1.2rem;
+	}
+
+	article img {
+		width: 50vw;
+	}
+
+	main {
+		background-attachment: scroll;
+	}
+}
