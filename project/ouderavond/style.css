@@ -60,8 +60,9 @@ a{
 }
 
 .linkstekst{
+    flex: 0 0 50%;
     text-align: left;
-    max-width: 45%;
+    max-width: 50%;
     h1{
         font-size: 20px
     }
@@ -99,9 +100,8 @@ main{
     text-align: center;
 }
 .rechtstekst{
-    text-align: right;
-    max-width: 45%;
-    margin-left: 60%;
+    flex: 1;
+    text-align: left;
     h1{
         font-size: 20px
     }
