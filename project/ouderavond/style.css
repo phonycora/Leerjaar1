@@ -27,8 +27,8 @@ nav{
 .submenu{
     position: absolute;
     inset: auto;
-    top: 100%;
-    left: 50%;
+    top: anchor(bottom);
+    left: anchor(center);
     z-index: 1;
     min-width: 220px;
     padding: 8px 0;
@@ -84,12 +84,18 @@ img{
 body{
     background-color: #723fb1;
 }
+main{
+    display: flex;
+    align-items: flex-start;
+    gap: 32px;
+}
 .footer {
     position: fixed;
     left: 0;
     bottom: 0;
     width: 100%;
     color: white;
+    background-color: #000000;
     text-align: center;
 }
 .rechtstekst{
@@ -98,5 +104,46 @@ body{
     margin-left: 60%;
     h1{
         font-size: 20px
+    }
+}.fotosovermij{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    margin-top: 20px;
+    margin-left: 20px;
+    width: fit-content;
+    flex: 0 0 320px;
+}
+
+.fotosovermij img{
+    float: none;
+    display: block;
+    max-width: 80%;
+    width: 320px;
+    height: auto;
+    border-radius: 10px;
+}
+.tekstovermij{
+    flex: 1;
+    margin-top: 20px;
+    text-align: right;
+    h1{
+        font-size: 20px
+    }
+    margin-right: 20px;
+}
+
+@media (max-width: 700px){
+    main{
+        flex-direction: column;
+    }
+
+    .fotosovermij{
+        flex: none;
+    }
+
+    .tekstovermij{
+        margin: 0 20px 20px;
     }
 }
