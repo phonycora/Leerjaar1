@@ -5,18 +5,74 @@
     font-family:'Times New Roman', Times, serif
 }
 nav{
-    background-color: #333;
+    background-color: #be3273;
     color: white;
     padding: 10px;
     text-align: center;
 }
 
-a:visited{
-    color:pink
+.menu{
+    position: relative;
+    display: inline-block;
+}
+
+.menu button{
+    cursor: pointer;
+    border: 0;
+    background: none;
+    color: inherit;
+    font: inherit;
+}
+
+.submenu{
+    position: absolute;
+    inset: auto;
+    top: 100%;
+    left: 50%;
+    z-index: 1;
+    min-width: 220px;
+    padding: 8px 0;
+    background-color: #be3273;
+    list-style: none;
+    text-align: left;
+    transform: translateX(-50%);
+    margin: 0;
+    border: 0;
+}
+
+.submenu a{
+    display: block;
+    padding: 8px 12px;
+}
+
+.submenu a:hover,
+.submenu a:focus{
+    background-color: #be3273;
+}
+
+a{
+    color: white;
+    text-decoration: none;
 }
 .begin{
     text-align: center;
     margin-top: 20px;
+}
+
+.linkstekst{
+    text-align: left;
+    max-width: 45%;
+    h1{
+        font-size: 20px
+    }
+    img{
+        display: block;
+        margin: 0 auto;
+        max-width: 100%;
+        height: auto;
+        float: left;
+        
+    }
 }
 
 img{
@@ -24,4 +80,23 @@ img{
     margin: 0 auto;
     max-width: 100%;
     height: auto;
+}
+body{
+    background-color: #723fb1;
+}
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    text-align: center;
+}
+.rechtstekst{
+    text-align: right;
+    max-width: 45%;
+    margin-left: 60%;
+    h1{
+        font-size: 20px
+    }
 }
