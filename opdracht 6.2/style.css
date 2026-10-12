@@ -1,0 +1,63 @@
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    padding: 40px 0;
+}
+
+.blok {
+    width: 200px;
+    height: 200px;
+}
+
+.blauw {
+    background-color: blue;
+}
+
+.zwart {
+    background-color: black;
+}
+
+.rood {
+    background-color: red;
+}
+
+.groen {
+    background-color: green;
+}
+
+.container2 {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    padding: 40px 0;
+}
+
+.blok2 {
+    width: 200px;
+    height: 200px;
+}
+
+.blauw2{
+    background-color: blue;
+}
+
+.zwart2 {
+    background-color: black;
+}
+
+.rood2 {
+    background-color: red;
+}
+
+.groen2 {
+    background-color: green;
+}
