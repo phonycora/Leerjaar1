@@ -85,6 +85,46 @@ img{
 body{
     background-color: #723fb1;
 }
+main.bsa-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 32px;
+    width: 100%;
+    padding: 30px 20px 0;
+}
+
+.bsa-tekst {
+    flex: 1;
+    max-width: 900px;
+    text-align: left;
+}
+
+.bsa-tekst h1 {
+    margin-bottom: 12px;
+    text-align: left;
+}
+
+.bsa-tekst p {
+    text-align: left;
+    font-size: 20px;
+}
+
+.bsa-foto {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 20px;
+    flex-shrink: 0;
+}
+
+.bsa-foto img {
+    width: 280px;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+}
+
 main{
     display: flex;
     align-items: flex-start;
