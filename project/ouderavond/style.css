@@ -130,6 +130,37 @@ main{
     align-items: flex-start;
     gap: 32px;
 }
+.examenplan-main{
+    flex-direction: column;
+    align-items: stretch;
+    padding: 30px 20px 80px;
+}
+.examenplan-links{
+    width: 100%;
+    overflow-x: auto;
+}
+.examenplan-links table{
+    width: 100%;
+    min-width: 700px;
+    border-collapse: collapse;
+    background-color: white;
+    color: #222;
+}
+.examenplan-links th,
+.examenplan-links td{
+    border: 1px solid #723fb1;
+    padding: 12px;
+    text-align: left;
+    vertical-align: top;
+    overflow-wrap: anywhere;
+}
+.examenplan-links th{
+    background-color: #be3273;
+    color: white;
+}
+.examenplan-links a{
+    color: #723fb1;
+}
 .footer {
     position: fixed;
     left: 0;
@@ -174,6 +205,62 @@ main{
     margin-right: 20px;
 }
 
+.info-school-locatie{
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    align-items: start;
+    gap: 32px;
+    width: 100%;
+    padding: 30px 20px 80px;
+}
+
+.info-school-fotos{
+    display: grid;
+    gap: 24px;
+}
+
+.info-school-fotos figure{
+    display: grid;
+    grid-template-columns: minmax(180px, 280px) minmax(0, 1fr);
+    align-items: center;
+    gap: 16px;
+}
+
+.info-school-fotos img{
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.info-school-fotos figcaption{
+    color: white;
+    font-size: 18px;
+    line-height: 1.4;
+}
+
+.info-school-tekst{
+    color: white;
+    text-align: left;
+}
+
+.info-school-tekst h1{
+    margin-bottom: 12px;
+}
+
+.info-school-tekst h2,
+.info-school-tekst p{
+    margin-bottom: 16px;
+}
+
+.info-school-tekst iframe{
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    height: auto;
+    border: 0;
+}
+
 @media (max-width: 700px){
     main{
         flex-direction: column;
@@ -185,5 +272,20 @@ main{
 
     .tekstovermij{
         margin: 0 20px 20px;
+    }
+
+    .info-school-locatie{
+        grid-template-columns: 1fr;
+        padding: 24px 20px 80px;
+    }
+}
+
+@media (max-width: 500px){
+    .info-school-fotos figure{
+        grid-template-columns: 1fr;
+    }
+
+    .info-school-fotos img{
+        height: 200px;
     }
 }
