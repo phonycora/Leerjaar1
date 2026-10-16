@@ -52,6 +52,53 @@
                 <p>Bekijk hier een video over het tienjarige bestaan van het Techniek College Rotterdam, dat een halfjaar geleden werd gevierd.</p>
                 <iframe src="https://www.youtube.com/embed/U_4P5fHgGSw?si=9xrb1pEZZ4AM5827" title="Video over het tienjarige bestaan van het Techniek College Rotterdam" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
+            <div class="formulier">
+                <h2>Stel uw vraag</h2>
+                <p>Vul het formulier in. Inzendingen worden momenteel nog niet verstuurd.</p>
+                <form>
+                    <div class="formulier-velden">
+                        <div class="formulier-veld">
+                            <label for="naam">Naam</label>
+                            <input type="text" id="naam" name="naam" autocomplete="name" required>
+                        </div>
+                        <div class="formulier-veld">
+                            <label for="email">E-mailadres</label>
+                            <input type="email" id="email" name="email" autocomplete="email" required>
+                        </div>
+                        <div class="formulier-veld">
+                            <label for="telefoon">Telefoonnummer (optioneel)</label>
+                            <input type="tel" id="telefoon" name="telefoon" autocomplete="tel">
+                        </div>
+                        <div class="formulier-veld">
+                            <label for="datum">Datum van uw bezoek (optioneel)</label>
+                            <input type="date" id="datum" name="datum">
+                        </div>
+                        <div class="formulier-veld">
+                            <label for="onderwerp">Onderwerp</label>
+                            <select id="onderwerp" name="onderwerp" required>
+                                <option value="">Kies een onderwerp</option>
+                                <option value="locatie">Locatie en bereikbaarheid</option>
+                                <option value="opleiding">Opleidingen en school</option>
+                                <option value="anders">Anders</option>
+                            </select>
+                        </div>
+                        <fieldset class="formulier-veld formulier-contact">
+                            <legend>Hoe wilt u het liefst contact?</legend>
+                            <label><input type="radio" name="contactvoorkeur" value="email" required> E-mail</label>
+                            <label><input type="radio" name="contactvoorkeur" value="telefoon"> Telefoon</label>
+                        </fieldset>
+                        <div class="formulier-veld formulier-vraag">
+                            <label for="vraag">Uw vraag</label>
+                            <textarea id="vraag" name="vraag" rows="5" required></textarea>
+                        </div>
+                    </div>
+                    <label class="formulier-toestemming">
+                        <input type="checkbox" name="toestemming" required>
+                        Ik geef toestemming om mijn gegevens te gebruiken om mijn vraag te beantwoorden.
+                    </label>
+                    <button type="button">Verzenden</button> <!-- doet niks -->
+                </form>
+            </div>
         </div>
     </main>
 
