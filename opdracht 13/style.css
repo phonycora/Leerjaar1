@@ -1,0 +1,142 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    color: #000;
+    font-family: Arial, sans-serif;
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 64px;
+    padding: 12px 24px;
+    background-color: #d62828;
+}
+
+.logo {
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.menu-block {
+    display: none;
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+}
+
+.content-section {
+    min-height: 240px;
+    padding: 40px 32px;
+}
+
+.content-section h2 {
+    margin: 0 0 16px;
+    font-size: 28px;
+}
+
+.content-section p {
+    max-width: 720px;
+    margin: 0;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.section-one {
+    background-color: #ffdf4d;
+}
+
+.section-two {
+    background-color: #f28c28;
+}
+
+.section-three {
+    background-color: #70b85a;
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+    .navigation {
+        min-height: 60px;
+        padding-right: 28px;
+        padding-left: 28px;
+        background-color: #b83232;
+    }
+
+    .content-section {
+        min-height: 220px;
+        padding: 36px 28px;
+    }
+
+    .content-section h2 {
+        font-size: 26px;
+    }
+
+    .content-section p {
+        max-width: 650px;
+        font-size: 17px;
+    }
+
+    .section-one {
+        background-color: #f4d75e;
+    }
+
+    .section-two {
+        background-color: #ed9b52;
+    }
+
+    .section-three {
+        background-color: #83b879;
+    }
+}
+
+@media (max-width: 600px) {
+    .navigation {
+        min-height: 68px;
+        padding: 14px 20px;
+        background-color: #7136a5;
+    }
+
+    .logo {
+        font-size: 30px;
+    }
+
+    .menu-block {
+        display: block;
+    }
+
+    .content-section {
+        min-height: 240px;
+        padding: 40px 24px;
+        color: #fff;
+        text-align: center;
+    }
+
+    .content-section h2 {
+        font-size: 25px;
+    }
+
+    .content-section p {
+        max-width: 100%;
+        margin: 0 auto;
+        font-size: 17px;
+        line-height: 1.6;
+        overflow-wrap: anywhere;
+    }
+
+    .section-one {
+        background-color: #65b9d1;
+    }
+
+    .section-two {
+        background-color: #a64b9b;
+    }
+
+    .section-three {
+        background-color: #173c78;
+    }
+}
