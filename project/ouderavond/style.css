@@ -1,22 +1,23 @@
-*{
+* { /* Stelt marges en lettertype in. */
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family:'Times New Roman', Times, serif
+    font-family: 'Times New Roman', Times, serif;
 }
-nav{
+
+nav { /* Geeft de navigatie kleur en ruimte. */
     background-color: #be3273;
     color: white;
     padding: 10px;
     text-align: center;
 }
 
-.menu{
+.menu { /* Centreert het menu als inline blok. */
     position: relative;
     display: inline-block;
 }
 
-.menu button{
+.menu button { /* Maakt de menuknop interactief. */
     cursor: pointer;
     border: 0;
     background: none;
@@ -24,7 +25,7 @@ nav{
     font: inherit;
 }
 
-.submenu{
+.submenu { /* Positioneert en stijlt het uitklapmenu. */
     position: absolute;
     inset: auto;
     top: anchor(bottom);
@@ -32,85 +33,86 @@ nav{
     z-index: 1;
     min-width: 220px;
     padding: 8px 0;
+    margin: 0;
+    border: 0;
     background-color: #be3273;
     list-style: none;
     text-align: left;
     transform: translateX(-50%);
-    margin: 0;
-    border: 0;
 }
 
-.submenu a{
+.submenu a { /* Maakt menu-links volledig klikbaar. */
     display: block;
     padding: 8px 12px;
 }
 
 .submenu a:hover,
-.submenu a:focus{
+.submenu a:focus { /* Markeert actieve menu-links. */
     background-color: #be3273;
 }
 
-a{
+a { /* Stelt de standaard linkkleur in. */
     color: white;
     text-decoration: none;
 }
-.begin{
+
+.begin { /* Centreert de paginakoptekst. */
     text-align: center;
     margin-top: 20px;
 }
 
-.linkstekst{
+.linkstekst { /* Stelt de linker startkolom in. */
     flex: 0 0 50%;
     text-align: left;
     max-width: 50%;
-    h1{
-        font-size: 20px
-    }
-    img{
-        display: block;
-        margin: 0 auto;
-        max-width: 100%;
-        height: auto;
-        float: left;
-        
-    }
 }
 
-img{
+.linkstekst h1 { /* Verkleint de kop in de startkolom. */
+    font-size: 20px;
+}
+
+.linkstekst img { /* Plaatst het logo links. */
+    float: left;
+}
+
+img { /* Beperkt afbeeldingen en behoudt verhoudingen. */
     display: block;
     margin: 0 auto;
     max-width: 100%;
     height: auto;
 }
-body{
+
+body { /* Geeft de pagina een paarse achtergrond. */
     background-color: #723fb1;
 }
-main.bsa-main {
+
+main { /* Zet pagina-inhoud naast elkaar. */
     display: flex;
-    justify-content: space-between;
     align-items: flex-start;
     gap: 32px;
+}
+
+main.bsa-main { /* Stelt de BSA-pagina-indeling in. */
+    justify-content: space-between;
     width: 100%;
     padding: 30px 20px 0;
 }
 
-.bsa-tekst {
+.bsa-tekst { /* Geeft de BSA-tekst ruimte. */
     flex: 1;
     max-width: 900px;
     text-align: left;
 }
 
-.bsa-tekst h1 {
+.bsa-tekst h1 { /* Geeft de BSA-kop onderruimte. */
     margin-bottom: 12px;
-    text-align: left;
 }
 
-.bsa-tekst p {
-    text-align: left;
+.bsa-tekst p { /* Vergroot de BSA-tekst. */
     font-size: 20px;
 }
 
-.bsa-foto {
+.bsa-foto { /* Zet BSA-foto's onder elkaar. */
     display: flex;
     flex-direction: column;
     align-items: flex-end;
@@ -118,50 +120,50 @@ main.bsa-main {
     flex-shrink: 0;
 }
 
-.bsa-foto img {
+.bsa-foto img { /* Formatteert de BSA-foto's. */
     width: 280px;
     height: auto;
-    display: block;
     border-radius: 10px;
 }
 
-main{
-    display: flex;
-    align-items: flex-start;
-    gap: 32px;
-}
-.examenplan-main{
+.examenplan-main { /* Stelt de examenpagina onder elkaar. */
     flex-direction: column;
     align-items: stretch;
     padding: 30px 20px 80px;
 }
-.examenplan-links{
+
+.examenplan-links { /* Voorkomt brede tabellen buiten beeld. */
     width: 100%;
     overflow-x: auto;
 }
-.examenplan-links table{
+
+.examenplan-links table { /* Stelt de examentabel in. */
     width: 100%;
     min-width: 700px;
     border-collapse: collapse;
     background-color: white;
     color: #222;
 }
+
 .examenplan-links th,
-.examenplan-links td{
+.examenplan-links td { /* Geeft tabelcellen randen en ruimte. */
     border: 1px solid #723fb1;
     padding: 12px;
     text-align: left;
     vertical-align: top;
     overflow-wrap: anywhere;
 }
-.examenplan-links th{
+
+.examenplan-links th { /* Kleurt de tabelkop roze. */
     background-color: #be3273;
     color: white;
 }
-.examenplan-links a{
+
+.examenplan-links a { /* Kleurt tabel-links paars. */
     color: #723fb1;
 }
-.footer {
+
+.footer { /* Houdt de voettekst onderaan vast. */
     position: fixed;
     left: 0;
     bottom: 0;
@@ -170,13 +172,17 @@ main{
     background-color: #000000;
     text-align: center;
 }
-.rechtstekst{
+
+.rechtstekst { /* Stelt de rechter startkolom in. */
     flex: 1;
     text-align: left;
-    h1{
-        font-size: 20px
-    }
-}.fotosovermij{
+}
+
+.rechtstekst h1 { /* Verkleint de kop in de rechterkolom. */
+    font-size: 20px;
+}
+
+.fotosovermij { /* Zet persoonlijke foto's onder elkaar. */
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -187,25 +193,25 @@ main{
     flex: 0 0 320px;
 }
 
-.fotosovermij img{
-    float: none;
-    display: block;
+.fotosovermij img { /* Formatteert de persoonlijke foto's. */
     max-width: 80%;
     width: 320px;
     height: auto;
     border-radius: 10px;
 }
-.tekstovermij{
+
+.tekstovermij { /* Stelt de tekst naast foto's in. */
     flex: 1;
     margin-top: 20px;
-    text-align: right;
-    h1{
-        font-size: 20px
-    }
     margin-right: 20px;
+    text-align: right;
 }
 
-.info-school-locatie{
+.tekstovermij h1 { /* Verkleint de persoonlijke paginakop. */
+    font-size: 20px;
+}
+
+.info-school-locatie { /* Verdeelt schoolinformatie in kolommen. */
     display: grid;
     grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
     align-items: start;
@@ -214,46 +220,46 @@ main{
     padding: 30px 20px 80px;
 }
 
-.info-school-fotos{
+.info-school-fotos { /* Rangschikt de schoolfoto's. */
     display: grid;
     gap: 24px;
 }
 
-.info-school-fotos figure{
+.info-school-fotos figure { /* Zet foto en bijschrift naast elkaar. */
     display: grid;
     grid-template-columns: minmax(180px, 280px) minmax(0, 1fr);
     align-items: center;
     gap: 16px;
 }
 
-.info-school-fotos img{
+.info-school-fotos img { /* Formatteert foto's van school. */
     width: 100%;
     height: 180px;
     object-fit: cover;
     border-radius: 10px;
 }
 
-.info-school-fotos figcaption{
+.info-school-fotos figcaption { /* Stelt bijschriften leesbaar in. */
     color: white;
     font-size: 18px;
     line-height: 1.4;
 }
 
-.info-school-tekst{
+.info-school-tekst { /* Stelt de schoolinformatie in. */
     color: white;
     text-align: left;
 }
 
-.info-school-tekst h1{
+.info-school-tekst h1 { /* Geeft de hoofdkop onderruimte. */
     margin-bottom: 12px;
 }
 
 .info-school-tekst h2,
-.info-school-tekst p{
+.info-school-tekst p { /* Geeft tekstblokken onderruimte. */
     margin-bottom: 16px;
 }
 
-.info-school-tekst iframe{
+.info-school-tekst iframe { /* Schaalt de schoolvideo mee. */
     display: block;
     width: 100%;
     aspect-ratio: 16 / 9;
@@ -261,7 +267,7 @@ main{
     border: 0;
 }
 
-.formulier{
+.formulier { /* Stijlt het contactformulier als paneel. */
     grid-column: 1 / -1;
     padding: 24px;
     border-radius: 10px;
@@ -270,18 +276,18 @@ main{
 }
 
 .formulier h2,
-.formulier > p{
+.formulier > p { /* Geeft de formulierkop ruimte. */
     margin-bottom: 16px;
 }
 
-.formulier-velden{
+.formulier-velden { /* Rangschikt velden in twee kolommen. */
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 16px;
     margin-bottom: 16px;
 }
 
-.formulier-veld{
+.formulier-veld { /* Zet label en invoer onder elkaar. */
     display: flex;
     flex-direction: column;
     gap: 6px;
@@ -289,7 +295,7 @@ main{
 
 .formulier-veld input:not([type="radio"]),
 .formulier-veld select,
-.formulier-veld textarea{
+.formulier-veld textarea { /* Geeft invoervelden dezelfde stijl. */
     width: 100%;
     padding: 10px;
     border: 1px solid #777;
@@ -297,36 +303,36 @@ main{
     font: inherit;
 }
 
-.formulier-veld textarea{
+.formulier-veld textarea { /* Laat tekstvelden verticaal vergroten. */
     resize: vertical;
 }
 
-.formulier-contact{
+.formulier-contact { /* Kader voor contactvoorkeuren. */
     padding: 10px;
     border: 1px solid #777;
     border-radius: 4px;
 }
 
 .formulier-contact label,
-.formulier-toestemming{
+.formulier-toestemming { /* Zet keuzevakjes netjes naast tekst. */
     display: flex;
     align-items: center;
     gap: 8px;
 }
 
-.formulier-contact label + label{
+.formulier-contact label + label { /* Scheidt de contactkeuzes. */
     margin-top: 8px;
 }
 
-.formulier-vraag{
+.formulier-vraag { /* Laat het vraagveld beide kolommen vullen. */
     grid-column: 1 / -1;
 }
 
-.formulier-toestemming{
+.formulier-toestemming { /* Geeft toestemmingstekst onderruimte. */
     margin-bottom: 16px;
 }
 
-.formulier button{
+.formulier button { /* Stijlt de verzendknop. */
     padding: 10px 16px;
     border: 0;
     border-radius: 4px;
@@ -335,44 +341,44 @@ main{
     font: inherit;
 }
 
-.formulier button:disabled{
+.formulier button:disabled { /* Markeert de uitgeschakelde knop. */
     cursor: not-allowed;
     opacity: 0.7;
 }
 
-@media (max-width: 700px){
-    main{
+@media (max-width: 700px) { /* Past de lay-out aan voor mobiel. */
+    main { /* Zet hoofdinhoud mobiel onder elkaar. */
         flex-direction: column;
     }
 
-    .fotosovermij{
+    .fotosovermij { /* Behoudt natuurlijke fotobreedte mobiel. */
         flex: none;
     }
 
-    .tekstovermij{
+    .tekstovermij { /* Geeft tekst mobiel passende marges. */
         margin: 0 20px 20px;
     }
 
-    .info-school-locatie{
+    .info-school-locatie { /* Zet schoolinformatie mobiel onder elkaar. */
         grid-template-columns: 1fr;
         padding: 24px 20px 80px;
     }
 
-    .formulier-velden{
+    .formulier-velden { /* Zet invoervelden mobiel onder elkaar. */
         grid-template-columns: 1fr;
     }
 
-    .formulier-vraag{
+    .formulier-vraag { /* Laat het vraagveld mobiel één kolom vullen. */
         grid-column: auto;
     }
 }
 
-@media (max-width: 500px){
-    .info-school-fotos figure{
+@media (max-width: 500px) { /* Verkleint de fotokolommen op mobiel. */
+    .info-school-fotos figure { /* Zet foto's boven bijschriften. */
         grid-template-columns: 1fr;
     }
 
-    .info-school-fotos img{
+    .info-school-fotos img { /* Vergroot foto's op smalle schermen. */
         height: 200px;
     }
 }
