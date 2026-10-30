@@ -31,7 +31,8 @@ nav { /* Geeft de navigatie kleur en ruimte. */
     top: anchor(bottom);
     left: anchor(center);
     z-index: 1;
-    min-width: 220px;
+    width: min(280px, calc(100vw - 32px));
+    min-width: min(220px, calc(100vw - 32px));
     padding: 8px 0;
     margin: 0;
     border: 0;
@@ -83,13 +84,18 @@ img { /* Beperkt afbeeldingen en behoudt verhoudingen. */
 }
 
 body { /* Geeft de pagina een paarse achtergrond. */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
     background-color: #723fb1;
 }
 
 main { /* Zet pagina-inhoud naast elkaar. */
     display: flex;
+    flex: 1 0 auto;
     align-items: flex-start;
     gap: 32px;
+    min-width: 0;
 }
 
 main.bsa-main { /* Stelt de BSA-pagina-indeling in. */
@@ -164,10 +170,8 @@ main.bsa-main { /* Stelt de BSA-pagina-indeling in. */
 }
 
 .footer { /* Houdt de voettekst onderaan vast. */
-    position: fixed;
-    left: 0;
-    bottom: 0;
     width: 100%;
+    padding: 8px 16px;
     color: white;
     background-color: #000000;
     text-align: center;
@@ -349,14 +353,52 @@ main.bsa-main { /* Stelt de BSA-pagina-indeling in. */
 @media (max-width: 700px) { /* Past de lay-out aan voor mobiel. */
     main { /* Zet hoofdinhoud mobiel onder elkaar. */
         flex-direction: column;
+        gap: 24px;
+    }
+
+    .linkstekst,
+    .rechtstekst { /* Gebruikt de volledige breedte voor startpagina-tekst. */
+        width: 100%;
+        max-width: none;
+        padding: 0 16px;
+    }
+
+    .linkstekst img { /* Centreert het logo onder de tekst. */
+        float: none;
+        margin: 16px auto 0;
     }
 
     .fotosovermij { /* Behoudt natuurlijke fotobreedte mobiel. */
         flex: none;
+        align-items: center;
+        width: 100%;
+        margin: 0;
+    }
+
+    .fotosovermij img {
+        width: min(320px, 100%);
+        max-width: 100%;
     }
 
     .tekstovermij { /* Geeft tekst mobiel passende marges. */
-        margin: 0 20px 20px;
+        width: 100%;
+        margin: 0;
+        padding: 0 16px 8px;
+        text-align: left;
+    }
+
+    .bsa-main { /* Zet BSA-tekst boven de foto's. */
+        align-items: stretch;
+    }
+
+    .bsa-foto { /* Plaatst BSA-foto's naast elkaar waar ruimte is. */
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .bsa-foto img {
+        width: min(280px, 100%);
     }
 
     .info-school-locatie { /* Zet schoolinformatie mobiel onder elkaar. */
@@ -373,6 +415,25 @@ main.bsa-main { /* Stelt de BSA-pagina-indeling in. */
     }
 }
 
+@media (max-width: 900px) {
+    .bsa-main {
+        flex-direction: column;
+    }
+
+    .bsa-foto {
+        align-items: center;
+        align-self: stretch;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .info-school-locatie {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 24px;
+    }
+}
+
 @media (max-width: 500px) { /* Verkleint de fotokolommen op mobiel. */
     .info-school-fotos figure { /* Zet foto's boven bijschriften. */
         grid-template-columns: 1fr;
@@ -380,5 +441,18 @@ main.bsa-main { /* Stelt de BSA-pagina-indeling in. */
 
     .info-school-fotos img { /* Vergroot foto's op smalle schermen. */
         height: 200px;
+    }
+
+    .bsa-main {
+        padding: 24px 16px 32px;
+    }
+
+    .bsa-tekst p {
+        font-size: 18px;
+        line-height: 1.5;
+    }
+
+    .formulier {
+        padding: 20px 16px;
     }
 }
